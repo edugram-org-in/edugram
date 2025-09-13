@@ -29,7 +29,7 @@ Our platform solves these issues by **making learning fun, interactive, and rewa
 ---
 
 ## 👨‍💻 Team
-**Team Name:** ___
+**Team Name:** Team Diamonds
 
 **Members:**   
 - Bhavya  
