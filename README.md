@@ -6,6 +6,12 @@ By blending **interactive content, local languages, and rewards-based learning**
 
 This project is developed as part of **Smart India Hackathon (SIH) 2025**.
 
+**PS Number: SIH25048**
+
+**Theme: Smart Education**
+
+**Organization: Government of Odisha**
+
 ---
 
 ## 🎯 Problem Statement
