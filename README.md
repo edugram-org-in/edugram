@@ -26,11 +26,12 @@ Our platform solves these issues by **making learning fun, interactive, and rewa
 ---
 
 ## ✨ Key Features
-- 🏆 **Gamified Learning Modules** – Quizzes, badges, leaderboards, and XP points  
-- 📚 **Curriculum-Aligned Content** – Subjects mapped to NCERT and state syllabi  
-- 🌐 **Multilingual Support** – Local language options for inclusivity   
+- 🏆 **Gamified Learning Modules** – Game based Quizzes, badges and leaderboards 
+- 🌐 **Multilingual Support** – Available in multiple Local languages of India
 - 👩‍🏫 **Teacher Dashboards** – Progress tracking and insights  
-- 💡 **Skill Boosters** – Practical knowledge, life skills, and career guidance  
+- 🤖 **AI ChatBot** - Personal AI guide throught the platform
+- 💻 **Mobile + Web Application** 
+- 🌐 **Offline Application** - You can use our application without internet
 
 ---
 
@@ -38,12 +39,13 @@ Our platform solves these issues by **making learning fun, interactive, and rewa
 **Team Name:** Team Diamonds
 
 **Members:**   
-- Bhavya  
-- Pragyensh  
-- Ritika  
-- Aman  
+- Bhavya Kumar
+- Pragyensh Pritiman Panda
+- Ritika Kasana
+- Aman Kumar
 - Rajat
-- Jiya  
+- Jiya Jahnavi 
+
 
 ---
 **Every child deserves not just education, but joyful learning — EduGram makes it possible. ❤️📚**  
