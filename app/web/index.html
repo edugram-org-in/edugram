@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="$FLUTTER_BASE_HREF" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="persistent_project" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>edugram</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <style>
+      body {
+        background: #000;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      #loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+      }
+
+      .loader {
+        border: 6px solid rgba(255, 255, 255, 0.2);
+        border-top: 6px solid #87ceeb;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    "
+  >
+    <!-- Loader Container -->
+    <div id="loading-container">
+      <div class="loader"></div>
+    </div>
+
+    <script src="flutter.js" defer></script>
+
+    <script>
+      var scriptLoaded = false;
+
+      function loadMainDartJs() {
+        if (scriptLoaded) return;
+        scriptLoaded = true;
+        var scriptTag = document.createElement("script");
+        scriptTag.src = "main.dart.js";
+        scriptTag.type = "application/javascript";
+        document.body.appendChild(scriptTag);
+      }
+
+      function removeLoader() {
+        var loader = document.getElementById("loading-container");
+        if (loader) {
+          loader.style.display = "none";
+        }
+      }
+
+      window.addEventListener("flutter-first-frame", function () {
+        removeLoader();
+        window.parent.postMessage({ type: "LOADING_COMPLETED", }, "*");
+      });
+
+      loadMainDartJs();
+    </script>
+
+    <script>
+      // Navigation tracking
+      (function (history) {
+        const pushState = history.pushState;
+        const replaceState = history.replaceState;
+
+        function logNavigation(method, url) {
+          // console.log(`[IN FLUTTER APP] - Navigated (${method}): ${url}`);
+          window.parent.postMessage({ type: "NAVIGATION", method, url }, "*");
+        }
+
+        history.pushState = function (state, title, url) {
+          logNavigation("pushState", url);
+          return pushState.apply(history, arguments);
+        };
+
+        history.replaceState = function (state, title, url) {
+          logNavigation("replaceState", url);
+          return replaceState.apply(history, arguments);
+        };
+
+        window.addEventListener("popstate", function (event) {
+          logNavigation("popstate", location.href);
+        });
+      })(window.history);
+    </script>
+
+    <!-- Plugin initialization code will be injected into flutter_plugins.js -->
+    <script src="flutter_plugins.js" defer></script>
+  </body>
+</html>
