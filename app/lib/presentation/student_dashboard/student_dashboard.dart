@@ -253,8 +253,8 @@ class _StudentDashboardState extends State<StudentDashboard>
           children: [
             // Header with greeting and stats
             DashboardHeaderWidget(
-              studentName: "Alex Johnson",
-              currentStreak: 7,
+              studentName: "Bhavya Kumar",
+              currentStreak: 12,
               heartsCount: 4,
               maxHearts: 5,
               heartRegenTime: const Duration(minutes: 12, seconds: 45),

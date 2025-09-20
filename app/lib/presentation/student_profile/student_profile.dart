@@ -23,9 +23,9 @@ class _StudentProfileState extends State<StudentProfile> {
   // Mock student data
   final Map<String, dynamic> _studentData = {
     "id": "student_001",
-    "username": "Alex Chen",
+    "username": "Bhavya Kumar",
     "class": "Class 10",
-    "school": "Einstein High School",
+    "school": "Dav Public School",
     "totalXP": 15420,
     "currentLevel": 15,
     "xpForNextLevel": 580,
@@ -84,7 +84,7 @@ class _StudentProfileState extends State<StudentProfile> {
       "icon": "science",
       "xpReward": 500,
       "isEarned": false,
-      "isNew": false,
+      "isNew": false
     },
     {
       "id": "speed_demon",
